@@ -1,6 +1,8 @@
 {% set name = "ros-rostime" %}
 {% set version = "0.6.13-1" %}
 {% set sha256 = "0aedc8397fb212ed0e019f63d739508a0b009e1a22943a86f8e4be20769b5157" %}
+{% set version = "0.6.13-1" %}
+{% set sha256 = "0aedc8397fb212ed0e019f63d739508a0b009e1a22943a86f8e4be20769b5157" %}
 
 package:
   name: {{ name }}
@@ -12,8 +14,7 @@ source:
 
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 0  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
